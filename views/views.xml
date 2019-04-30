@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="kcra__product_manage.list">
+      <field name="name">KCRA_ProductManage list</field>
+      <field name="model">kcra__product_manage.kcra__product_manage</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="kcra__product_manage.action_window">
+      <field name="name">KCRA_ProductManage window</field>
+      <field name="res_model">kcra__product_manage.kcra__product_manage</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="kcra__product_manage.action_server">
+      <field name="name">KCRA_ProductManage server</field>
+      <field name="model_id" ref="model_kcra__product_manage_kcra__product_manage"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="KCRA_ProductManage" id="kcra__product_manage.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="kcra__product_manage.menu_1" parent="kcra__product_manage.menu_root"/>
+    <menuitem name="Menu 2" id="kcra__product_manage.menu_2" parent="kcra__product_manage.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="kcra__product_manage.menu_1_list" parent="kcra__product_manage.menu_1"
+              action="kcra__product_manage.action_window"/>
+    <menuitem name="Server to list" id="kcra__product_manage" parent="kcra__product_manage.menu_2"
+              action="kcra__product_manage.action_server"/>
+    -->
+  </data>
+</odoo>
