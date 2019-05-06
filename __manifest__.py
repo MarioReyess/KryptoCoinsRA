@@ -3,21 +3,21 @@
     'name': "KCRA_ProductManage",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
+        Gestió de Cripto Monedes.
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        Descripció del modul de KryptoCoins, gestiona, crea, visualitza la gestió de les Cripto Monedes.
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Mario & Victor",
+    'website': "http://www.youtube.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/11.0/odoo/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Coins',
+    'version': '0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
