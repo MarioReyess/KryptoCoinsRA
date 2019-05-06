@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="kcra__product_manage.list">
+<!--    <record model="ir.ui.view" id="kcra__product_manage.list">
       <field name="name">KCRA_ProductManage list</field>
       <field name="model">kcra__product_manage.kcra__product_manage</field>
       <field name="arch" type="xml">
@@ -11,7 +11,7 @@
           <field name="value2"/>
         </tree>
       </field>
-    </record>
+    </record>-->
 
     <!-- actions opening views on models -->
     <!--

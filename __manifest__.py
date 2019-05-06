@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "KCRA_ProductManage",
+    'name': "Gestió de Cripto Monedes",
 
     'summary': """
         Gestió de Cripto Monedes.
@@ -10,7 +10,7 @@
         Descripció del modul de KryptoCoins, gestiona, crea, visualitza la gestió de les Cripto Monedes.
     """,
 
-    'author': "Mario & Victor",
+    'author': "KryptoCoinsRA, Mario & Victor",
     'website': "http://www.kriptocoins.ra",
 
     # Categories can be used to filter modules in modules listing
