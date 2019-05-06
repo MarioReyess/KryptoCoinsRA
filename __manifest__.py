@@ -4,14 +4,14 @@
 
     'summary': """
         Gestió de Cripto Monedes.
-        subtitle on modules listing or apps.openerp.com""",
+        """,
 
     'description': """
         Descripció del modul de KryptoCoins, gestiona, crea, visualitza la gestió de les Cripto Monedes.
     """,
 
     'author': "Mario & Victor",
-    'website': "http://www.youtube.com",
+    'website': "http://www.kriptocoins.ra",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/11.0/odoo/addons/base/module/module_data.xml
