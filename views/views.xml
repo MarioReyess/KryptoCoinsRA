@@ -39,16 +39,9 @@
         <menuitem name="Cripto Monedes" id="kcra__product_manage_menu_root" sequence="1"/>
 
         <!-- menu categories -->
-        <menuitem name="Menu 1" id="kcra__product_manage_category_1" sequence="1" parent="kcra__product_manage_menu_root"/>
-        <menuitem name="Menu 2" id="kcra__product_manage_menu_2" sequence="1" parent="kcra__product_manage_category_1"
+        <menuitem name="Gestió de Cripto Monedes" id="kcra__product_manage_category_1" sequence="1" parent="kcra__product_manage_menu_root"/>
+        <menuitem name="Vista General" id="kcra__product_manage_menu_2" sequence="1" parent="kcra__product_manage_category_1"
                   action="kcra__product_manage_action_window"/>
 
-        <!-- actions -->
-        <!--
-        <menuitem name="List" id="kcra__product_manage.menu_1_list" parent="kcra__product_manage.menu_1"
-                  action="kcra__product_manage.action_window"/>
-        <menuitem name="Server to list" id="kcra__product_manage" parent="kcra__product_manage.menu_2"
-                  action="kcra__product_manage.action_server"/>
-        -->
     </data>
 </odoo>
