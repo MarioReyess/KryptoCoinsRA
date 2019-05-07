@@ -7,5 +7,5 @@ class kcra__product_manage(models.Model):
     _name = 'kcra__product_manage.kcra__product_manage_tags'
 
     name = fields.Char(string="Nom etiqueta")
-    tags_id = fields.Many2one("kcra__product_manage_coins", string="Coins")
+    coins_id = fields.Many2one("kcra__product_manage_coins", string="Coins")
 

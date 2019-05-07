@@ -7,7 +7,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="pages"/>
+                    <field name="price"/>
+                    <field name="tags_id"/>
                 </tree>
             </field>
         </record>
