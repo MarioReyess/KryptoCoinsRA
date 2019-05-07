@@ -3,7 +3,7 @@
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="kcra__product_manage_coins">
             <field name="name">kcra_product_manage_coins</field>
-            <field name="model">kcra__product_manage.kcra__product_manage_coins</field>
+            <field name="model">kcra__product_manage_coins</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
@@ -16,7 +16,7 @@
         <!-- actions opening views on models -->
         <record id="kcra__product_manage_action_window" model="ir.actions.act_window">
             <field name="name">Gestió de Cripto Monedes</field>
-            <field name="res_model">kcra__product_manage.kcra__product_manage_coins</field>
+            <field name="res_model">kcra__product_manage_coins</field>
             <field name="view_mode">tree,form</field>
         </record>
 
