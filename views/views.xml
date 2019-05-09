@@ -5,10 +5,61 @@
             <field name="name">kcra_product_manage_coins</field>
             <field name="model">kcra__product_manage_coins</field>
             <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="price"/>
+                    <field name="qty"/>
+                    <field name="tags_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <field name="price"/>
+                            <field name="qty"/>
+                            <field name="tags_id"/>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kcra__product_manage_coins_graph">
+            <field name="name">kcra_product_manage_coins</field>
+            <field name="model">kcra__product_manage_coins</field>
+            <field name="arch" type="xml">
+                <graph string="Grafic">
+                    <field name="name" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kcra__product_manage_tokens">
+            <field name="name">kcra_product_manage_tokens</field>
+            <field name="model">kcra__product_manage_tokens</field>
+            <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
                     <field name="price"/>
+                    <field name="qty"/>
                     <field name="tags_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kcra__product_manage_coins_graph2">
+            <field name="name">kcra_product_manage_tokens</field>
+            <field name="model">kcra__product_manage_tokens</field>
+            <field name="arch" type="xml">
+                <graph string="Grafic">
+                    <field name="name" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kcra__product_manage_tags">
+            <field name="name">kcra_product_manage_tags</field>
+            <field name="model">kcra__product_manage_tags</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
                 </tree>
             </field>
         </record>
@@ -17,32 +68,56 @@
         <record id="kcra__product_manage_action_window" model="ir.actions.act_window">
             <field name="name">Gestió de Cripto Monedes</field>
             <field name="res_model">kcra__product_manage_coins</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <record id="kcra__product_tokens_manage_action_window" model="ir.actions.act_window">
+            <field name="name">Gestió de Cripto Tokens</field>
+            <field name="res_model">kcra__product_manage_tokens</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- server action to the one above -->
-        <!--
-        <record model="ir.actions.server" id="kcra__product_manage.action_server">
-          <field name="name">KCRA_ProductManage server</field>
-          <field name="model_id" ref="model_kcra__product_manage_kcra__product_manage"/>
-          <field name="state">code</field>
-          <field name="code">
-            action = {
-              "type": "ir.actions.act_window",
-              "view_mode": "tree,form",
-              "res_model": self._name,
-            }
-          </field>
+        <record id="kcra__product_tags_manage_action_window" model="ir.actions.act_window">
+            <field name="name">Gestió de Etiquetes</field>
+            <field name="res_model">kcra__product_manage_tags</field>
+            <field name="view_mode">tree,form</field>
         </record>
-        -->
+
+        <record id="kcra__product_graphs_manage_action_window" model="ir.actions.act_window">
+            <field name="name">Grafic Cripto Monedes</field>
+            <field name="res_model">kcra__product_manage_coins</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+        </record>
+
+        <record id="kcra__product_graphs2_manage_action_window" model="ir.actions.act_window">
+            <field name="name">Grafic Cripto Tokens</field>
+            <field name="res_model">kcra__product_manage_tokens</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+        </record>
 
         <!-- Top menu item -->
         <menuitem name="Cripto Monedes" id="kcra__product_manage_menu_root" sequence="1"/>
 
         <!-- menu categories -->
-        <menuitem name="Gestió de Cripto Monedes" id="kcra__product_manage_category_1" sequence="1" parent="kcra__product_manage_menu_root"/>
-        <menuitem name="Vista General" id="kcra__product_manage_menu_2" sequence="1" parent="kcra__product_manage_category_1"
+        <menuitem name="Gestió de Cripto Monedes" id="kcra__product_manage_category_1" sequence="1"
+                  parent="kcra__product_manage_menu_root"/>
+        <menuitem name="Vista General" id="kcra__product_manage_menu_2" sequence="1"
+                  parent="kcra__product_manage_category_1"
                   action="kcra__product_manage_action_window"/>
+        <menuitem name="Tokens" id="kcra__product_manage_menu_3" sequence="1" parent="kcra__product_manage_category_1"
+                  action="kcra__product_tokens_manage_action_window"/>
+        <menuitem name="Tags" id="kcra__product_manage_menu_4" sequence="1" parent="kcra__product_manage_category_1"
+                  action="kcra__product_tags_manage_action_window"/>
 
+        <menuitem name="Graficas" id="kcra__product_manage_category_2" sequence="1"
+                  parent="kcra__product_manage_menu_root"/>
+        <menuitem name="Cripto Monedes Grafics" id="kcra__product_manage_menu_5" sequence="1"
+                  parent="kcra__product_manage_category_2"
+                  action="kcra__product_graphs_manage_action_window"/>
+        <menuitem name="Cripto Tokens Grafics" id="kcra__product_manage_menu_6" sequence="1"
+                  parent="kcra__product_manage_category_2"
+                  action="kcra__product_graphs2_manage_action_window"/>
     </data>
 </odoo>
