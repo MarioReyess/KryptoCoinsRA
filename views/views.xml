@@ -43,14 +43,12 @@
             <field name="name">kcra_product_manage_tokens</field>
             <field name="model">kcra__product_manage_tokens</field>
             <field name="arch" type="xml">
-                <form>
-                    <group>
-                        <field name="name"/>
-                        <field name="price"/>
-                        <field name="qty"/>
-                        <field name="tags_id"/>
-                    </group>
-                </form>
+                <tree>
+                    <field name="name"/>
+                    <field name="price"/>
+                    <field name="qty"/>
+                    <field name="tags_id"/>
+                </tree>
             </field>
         </record>
 
@@ -85,6 +83,7 @@
         <record id="kcra__product_tokens_manage_action_window" model="ir.actions.act_window">
             <field name="name">Gestió de Cripto Tokens</field>
             <field name="res_model">kcra__product_manage_tokens</field>
+            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 

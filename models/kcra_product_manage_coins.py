@@ -6,7 +6,6 @@ from odoo import models, fields, api, exceptions
 class kcra__product_manage(models.Model):
     _name = 'kcra__product_manage_coins'
 
-    image = fields.Binary()
     name = fields.Char(string="Nom moneda")
     price = fields.Float(string="Preu")
     qty = fields.Integer(string="Quantitat")
