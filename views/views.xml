@@ -36,6 +36,12 @@
                 <graph string="Grafic">
                     <field name="name" type="row"/>
                 </graph>
+                <pivot string="Dades">
+                    <field name="name"/>
+                    <field name="price"/>
+                    <field name="qty"/>
+                    <field name="tags_id"/>
+                </pivot>
             </field>
         </record>
 
@@ -97,7 +103,7 @@
             <field name="name">Grafic Cripto Monedes</field>
             <field name="res_model">kcra__product_manage_coins</field>
             <field name="view_type">form</field>
-            <field name="view_mode">graph</field>
+            <field name="view_mode">graph,pivot</field>
         </record>
 
         <record id="kcra__product_graphs2_manage_action_window" model="ir.actions.act_window">
